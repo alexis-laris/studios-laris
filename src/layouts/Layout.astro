@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import profile from "../assets/imgs/profile.png";
 import Navbar from "../components/navbar/Navbar.astro";
 import Hero from "../components/hero/Hero.astro";
 import Servicios from "../components/servicios/Servicios.astro";
@@ -14,8 +15,8 @@ import ScrollToTop from "../components/ui/ScrollToTop.astro";
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="icon" href="/src/assets/imgs/profile.png" />
-		<title>Studios Laris</title>
+		<link rel="icon" href={profile.src} />
+		<title>Studios Laris 🎨</title>
 	</head>
 	<body>
 		<Navbar />
