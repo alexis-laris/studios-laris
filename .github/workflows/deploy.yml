@@ -20,13 +20,12 @@ jobs:
 
       - name: Create Service Account JSON file
         run: |
-          echo "${{ secrets.GCP_SA_KEY }}" > ${HOME}/gcloud-key.json
-        shell: bash
+          echo "${{ secrets.GCP_SA_KEY }}" > $GITHUB_WORKSPACE/gcloud-key.json
 
       - name: Submit to Cloud Build & Deploy to Cloud Run
-        env:
-          CLOUDSDK_AUTH_CREDENTIAL_FILE_OVERRIDE: ${HOME}/gcloud-key.json
         run: |
+          export CLOUDSDK_AUTH_CREDENTIAL_FILE_OVERRIDE=$GITHUB_WORKSPACE/gcloud-key.json
+          
           gcloud builds submit . \
             --tag gcr.io/first-vision-480408-d1/studios-laris
           
