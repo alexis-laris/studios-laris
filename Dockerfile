@@ -1,32 +1,27 @@
 # ============================
 # 1. Build stage
 # ============================
-FROM node:18-alpine AS builder
+FROM node:22.12.0 AS build
 
 WORKDIR /app
 
 COPY package*.json ./
-COPY . .
+RUN npm ci --force
 
-RUN npm install
+COPY . .
 RUN npm run build
 
 # ============================
 # 2. Run stage
 # ============================
-FROM node:18-alpine AS runner
+FROM nginx:alpine
 
-WORKDIR /app
+# Copiamos la carpeta generada por Astro
+COPY --from=build /app/dist /usr/share/nginx/html
 
-# Copiamos solo los archivos necesarios para producción
-COPY --from=builder /app/dist ./dist
-COPY package*.json ./
+# Opcional: si quieres customizar Nginx, agrega tu nginx.conf
+# COPY nginx.conf /etc/nginx/nginx.conf
 
-# Servidor estático en producción
-RUN npm install --omit=dev serve
-
-# Cloud Run escucha en el puerto definido por la variable de entorno $PORT
-CMD sh -c "npx serve dist -l 0.0.0.0:$PORT -s"
-
-# Exponemos el puerto, aunque Cloud Run lo sobreescribirá
 EXPOSE 8080
+
+CMD ["nginx", "-g", "daemon off;"]
