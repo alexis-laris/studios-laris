@@ -27,5 +27,5 @@ RUN npm install --omit=dev serve
 
 # Cloud Run escucha en 8080
 CMD ["npx", "serve", "dist", "-l", "0.0.0.0:8080", "-s"]
-
+# Cloud Run escucha en 8080
 EXPOSE 8080
