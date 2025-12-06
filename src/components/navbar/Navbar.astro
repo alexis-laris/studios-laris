@@ -1,5 +1,6 @@
 ---
-import profile from "/src/assets/imgs/profile.png";
+import profile from "@/assets/imgs/profile.png";
+import "./Navbar.css";
 ---
 
 <nav class="p-4 bg-[#11071F] z-50 border-b-4 border-[#05f2af] sticky top-0">
@@ -15,6 +16,7 @@ import profile from "/src/assets/imgs/profile.png";
                 alt="Laris Studios Logo"
             />
         </a>
+
         <ul
             class="hidden md:flex gap-10 font-anton text-white text-lg italic uppercase"
         >
@@ -36,8 +38,6 @@ import profile from "/src/assets/imgs/profile.png";
         <a class="menu-link" href="#trabajos">Trabajos</a>
         <a class="menu-link" href="#contacto">Contacto</a>
     </div>
-    <script></script>
 </nav>
 
-<link rel="stylesheet" href="/src/components/navbar/Navbar.css" />
-<script src="/src/components/navbar/Navbjar.js"></script>
+<script src="./Navbar.js"></script>

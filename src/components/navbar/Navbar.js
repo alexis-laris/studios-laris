@@ -7,12 +7,12 @@ menuButton.addEventListener("click", function (e) {
     if (window.innerWidth < 768) {
         e.preventDefault();
 
-        // 🔄 Forzar reinicio de animación cada vez
+
         img.classList.remove("rotate-once");
-        void img.offsetWidth; // <- truco para resetear animación
+        void img.offsetWidth;
         img.classList.add("rotate-once");
 
-        // Mostrar u ocultar menú
+
         mobileMenu.classList.toggle("-translate-y-full");
         mobileMenu.classList.toggle("translate-y-0");
     }
