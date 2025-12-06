@@ -10,6 +10,7 @@ import {
     Copyright,
 } from "lucide-astro";
 import profile from "/src/assets/imgs/profile.png";
+import "./Footer.css";
 ---
 
 <footer
@@ -50,19 +51,19 @@ import profile from "/src/assets/imgs/profile.png";
         <div class="flex flex-col gap-3 text-center md:text-left">
             <h3 class="text-lg italic text-[#05F2AF] font-anton">Navegación</h3>
 
-            <a href="/" class="text-white/70 hover:text-white transition"
+            <a href="#inicio" class="text-white/70 hover:text-white transition"
                 >Inicio</a
             >
             <a
-                href="/servicios"
+                href="#servicios"
                 class="text-white/70 hover:text-white transition">Servicios</a
             >
             <a
-                href="/clientes"
+                href="#clientes"
                 class="text-white/70 hover:text-white transition">Clientes</a
             >
             <a
-                href="/trabajos"
+                href="#trabajos"
                 class="text-white/70 hover:text-white transition">Trabajos</a
             >
         </div>
@@ -115,5 +116,3 @@ import profile from "/src/assets/imgs/profile.png";
         <span>2025 Desarrollado por Alexis Laris</span>
     </div>
 </footer>
-
-<link rel="stylesheet" href="/src/components/footer/Footer.css" />
