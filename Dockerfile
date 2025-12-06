@@ -25,7 +25,8 @@ COPY package*.json ./
 # Servidor estático en producción
 RUN npm install --omit=dev serve
 
-# Cloud Run escucha en 8080
-CMD ["npx", "serve", "dist", "-l", "0.0.0.0:8080", "-s"]
-# Cloud Run escucha en 8080
+# Cloud Run escucha en el puerto definido por la variable de entorno $PORT
+CMD sh -c "npx serve dist -l 0.0.0.0:$PORT -s"
+
+# Exponemos el puerto, aunque Cloud Run lo sobreescribirá
 EXPOSE 8080
