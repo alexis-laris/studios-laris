@@ -1,0 +1,69 @@
+<div class="oferta-fixed">
+    <p class="oferta-text">
+        OFERTA<br />1 MINIATURA<br /><span class="precio">$100 MXN</span>
+    </p>
+</div>
+
+<style>
+    .oferta-fixed {
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        background: #e60000;
+        padding: 16px 22px;
+        border-radius: 14px;
+        box-shadow: 0 0 14px rgba(0, 0, 0, 0.35);
+        animation: floaty 3s ease-in-out infinite;
+        z-index: 9999;
+        cursor: pointer;
+        transition:
+            transform 0.2s ease,
+            box-shadow 0.2s ease;
+    }
+
+    .oferta-fixed:hover {
+        transform: scale(1.07);
+        box-shadow: 0 0 18px rgba(0, 0, 0, 0.45);
+    }
+
+    .oferta-text {
+        color: white;
+        font-size: 1rem;
+        font-weight: 700;
+        text-align: center;
+        font-family: sans-serif;
+        line-height: 1.3;
+    }
+
+    .precio {
+        display: block;
+        font-size: 1.5rem;
+        font-weight: 900;
+        margin-top: 4px;
+        color: #ffea00;
+        text-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+    }
+
+    @keyframes floaty {
+        0% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-8px);
+        }
+        100% {
+            transform: translateY(0);
+        }
+    }
+
+    @media (max-width: 600px) {
+        .oferta-fixed {
+            bottom: 10px;
+            left: 10px;
+            padding: 10px 16px;
+        }
+        .oferta-text {
+            font-size: 0.85rem;
+        }
+    }
+</style>
