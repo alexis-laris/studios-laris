@@ -19,6 +19,8 @@ jobs:
           service_account_key: ${{ secrets.GCP_SA_KEY }}
 
       - name: Submit to Cloud Build & Deploy to Cloud Run
+        env:
+          CLOUDSDK_AUTH_CREDENTIAL_FILE_OVERRIDE: ${{ secrets.GCP_SA_KEY }}
         run: |
           gcloud builds submit . \
             --tag gcr.io/first-vision-480408-d1/studios-laris
