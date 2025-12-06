@@ -19,8 +19,8 @@ FROM nginx:alpine
 # Copiamos la carpeta generada por Astro
 COPY --from=build /app/dist /usr/share/nginx/html
 
-# Opcional: si quieres customizar Nginx, agrega tu nginx.conf
-# COPY nginx.conf /etc/nginx/nginx.conf
+# Configuramos Nginx para escuchar el puerto de Cloud Run
+RUN sed -i "s/listen       80;/listen       ${PORT:-8080};/" /etc/nginx/conf.d/default.conf
 
 EXPOSE 8080
 
