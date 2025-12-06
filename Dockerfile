@@ -11,7 +11,6 @@ COPY . .
 RUN npm install
 RUN npm run build
 
-
 # ============================
 # 2. Run stage
 # ============================
@@ -29,4 +28,4 @@ RUN npm install --omit=dev serve
 ENV PORT=8080
 
 # Cloud Run siempre expone 8080
-CMD ["npx", "serve", "dist", "-l", "8080"]
+CMD ["npx", "serve", "dist", "-l", "8080", "-s"]
