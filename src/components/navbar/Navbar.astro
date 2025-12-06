@@ -1,0 +1,43 @@
+---
+import profile from "/src/assets/imgs/profile.png";
+---
+
+<nav class="p-4 bg-[#11071F] z-50 border-b-4 border-[#05f2af] sticky top-0">
+    <div class="max-w-7xl mx-auto flex items-center justify-between relative">
+        <a
+            id="menuButton"
+            href="#inicio"
+            class="block w-14 h-14 group mx-auto mt-2 md:static md:transform-none md:ml-4 z-50"
+        >
+            <img
+                src={profile.src}
+                class="w-full h-full rounded-full object-cover glow-image rotate-360 cursor-pointer transition-transform duration-700 ease-out"
+                alt="Laris Studios Logo"
+            />
+        </a>
+        <ul
+            class="hidden md:flex gap-10 font-anton text-white text-lg italic uppercase"
+        >
+            <li><a class="menu-link" href="#inicio">Inicio</a></li>
+            <li><a class="menu-link" href="#servicios">Servicios</a></li>
+            <li><a class="menu-link" href="#clientes">Clientes</a></li>
+            <li><a class="menu-link" href="#trabajos">Trabajos</a></li>
+            <li><a class="menu-link" href="#contacto">Contacto</a></li>
+        </ul>
+    </div>
+
+    <div
+        id="mobileMenu"
+        class="fixed inset-0 bg-[#11071F] flex flex-col items-center justify-center gap-8 text-white text-2xl font-anton uppercase transform -translate-y-full transition-transform duration-500 md:hidden"
+    >
+        <a class="menu-link" href="#inicio">Inicio</a>
+        <a class="menu-link" href="#servicios">Servicios</a>
+        <a class="menu-link" href="#clientes">Clientes</a>
+        <a class="menu-link" href="#trabajos">Trabajos</a>
+        <a class="menu-link" href="#contacto">Contacto</a>
+    </div>
+    <script></script>
+</nav>
+
+<link rel="stylesheet" href="/src/components/navbar/Navbar.css" />
+<script src="/src/components/navbar/Navbjar.js"></script>

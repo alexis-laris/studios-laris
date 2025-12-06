@@ -1,0 +1,93 @@
+---
+import { Laptop, Paintbrush, Zap } from "lucide-astro";
+---
+
+<section
+    id="servicios"
+    class="relative w-full min-h-screen bg-white
+           flex items-center justify-center
+           overflow-hidden
+           pt-20 pb-20
+           px-4 sm:px-6 md:px-12"
+>
+    <div
+        class="absolute inset-0 pointer-events-none mix-blend-overlay opacity-30 bg-linear-to-b from-transparent via-[#4B1C8C]/10 to-transparent blur-2xl"
+    >
+    </div>
+
+    <div
+        class="absolute bottom-0 inset-x-0 h-1/2 pointer-events-none bg-linear-to-t from-[#000000]/20 via-[#000000]/10 to-transparent"
+    >
+    </div>
+
+    <div class="relative z-10 w-full text-center select-none">
+        <div class="mb-4 md:mb-6 lg:mb-8">
+            <span
+                class="tracking-[0.2em] text-[#11071F] text-base sm:text-lg md:text-xl lg:text-2xl block"
+            >
+                ✦ SERVICIOS PROFESIONALES ✦
+            </span>
+        </div>
+
+        <h1
+            class="relative text-black font-anton uppercase leading-none text-[clamp(2.8rem,18vw,11rem)] overflow-hidden shine-title"
+        >
+            MIS <span class="text-[#05F2AF] italic">SERVICIOS</span>
+            <span class="shine-effect"></span>
+        </h1>
+
+        <div
+            class="mt-10 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto px-2 sm:px-4"
+        >
+            <div
+                class="bg-[#11071F] border-b-4 border-[#05f2af] p-6 sm:p-8 rounded-4xl shadow-xl hover:scale-[1.03] transition-all duration-300 backdrop-blur cursor-pointer"
+            >
+                <Laptop
+                    class="w-14 h-14 sm:w-16 sm:h-16 text-[#05F2AF] mx-auto mb-4"
+                />
+                <h2 class="text-2xl sm:text-3xl text-[#05F2AF] uppercase mb-3">
+                    Desarrollo Web
+                </h2>
+                <p
+                    class="text-gray-300 font-light tracking-wide text-sm sm:text-base"
+                >
+                    Sitios rápidos, seguros y hechos a la medida.
+                </p>
+            </div>
+
+            <div
+                class="bg-[#11071F] border-b-4 border-[#05f2af] p-6 sm:p-8 rounded-4xl shadow-xl hover:scale-[1.03] transition-all duration-300 backdrop-blur cursor-pointer"
+            >
+                <Paintbrush
+                    class="w-14 h-14 sm:w-16 sm:h-16 text-[#05F2AF] mx-auto mb-4"
+                />
+                <h2 class="text-2xl sm:text-3xl text-[#05F2AF] uppercase mb-3">
+                    Diseño Gráfico
+                </h2>
+                <p
+                    class="text-gray-300 font-light tracking-wide text-sm sm:text-base"
+                >
+                    Estética única para que tu marca destaque.
+                </p>
+            </div>
+
+            <div
+                class="bg-[#11071F] border-b-4 border-[#05f2af] p-6 sm:p-8 rounded-4xl shadow-xl hover:scale-[1.03] transition-all duration-300 backdrop-blur cursor-pointer"
+            >
+                <Zap
+                    class="w-14 h-14 sm:w-16 sm:h-16 text-[#05F2AF] mx-auto mb-4"
+                />
+                <h2 class="text-2xl sm:text-3xl text-[#05F2AF] uppercase mb-3">
+                    Entregas Rápidas
+                </h2>
+                <p
+                    class="text-gray-300 font-light tracking-wide text-sm sm:text-base"
+                >
+                    Velocidad sin perder calidad.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<link rel="stylesheet" href="/src/components/servicios/Servicios.css" />

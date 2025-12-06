@@ -1,0 +1,119 @@
+---
+import {
+    Youtube,
+    Instagram,
+    Facebook,
+    Music2,
+    Send,
+    Mail,
+    Phone,
+    Copyright,
+} from "lucide-astro";
+import profile from "/src/assets/imgs/profile.png";
+---
+
+<footer
+    class="relative w-full bg-black text-white pt-20 pb-10 px-6 md:px-12 overflow-hidden"
+>
+    <div
+        class="absolute top-0 left-0 w-[400px] h-[400px] bg-[#05F2AF]/20 blur-[160px] rounded-full"
+    >
+    </div>
+    <div
+        class="absolute bottom-0 right-0 w-[400px] h-[400px] bg-[#6b2df5]/20 blur-[140px] rounded-full"
+    >
+    </div>
+
+    <div
+        class="relative max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10"
+    >
+        <div
+            class="group flex flex-col items-center md:items-start text-center md:text-left gap-4"
+        >
+            <a href="#inicio">
+                <div class="w-28 h-28 rounded-full overflow-hidden">
+                    <img
+                        src={profile.src}
+                        alt="Profile"
+                        class="w-full h-full rounded-full object-cover glow-image rotate-360 cursor-pointer"
+                    />
+                </div>
+            </a>
+
+            <h2 class="text-2xl font-anton uppercase tracking-wide">
+                Alexis <span class="text-[#05F2AF] italic">Laris</span>
+            </h2>
+
+            <p class="text-white/70 max-w-xs">Software Engineer</p>
+        </div>
+
+        <div class="flex flex-col gap-3 text-center md:text-left">
+            <h3 class="text-lg italic text-[#05F2AF] font-anton">Navegación</h3>
+
+            <a href="/" class="text-white/70 hover:text-white transition"
+                >Inicio</a
+            >
+            <a
+                href="/servicios"
+                class="text-white/70 hover:text-white transition">Servicios</a
+            >
+            <a
+                href="/clientes"
+                class="text-white/70 hover:text-white transition">Clientes</a
+            >
+            <a
+                href="/trabajos"
+                class="text-white/70 hover:text-white transition">Trabajos</a
+            >
+        </div>
+
+        <div class="flex flex-col gap-4 text-center md:text-left">
+            <h3 class="text-lg italic text-[#05F2AF] font-anton">Contacto</h3>
+
+            <div
+                class="flex items-center gap-3 justify-center md:justify-start text-white/70"
+            >
+                <Mail class="w-5 h-5 text-[#05F2AF]" />
+                <span>diegolaris72@gmail.com</span>
+            </div>
+
+            <div
+                class="flex items-center gap-3 justify-center md:justify-start text-white/70"
+            >
+                <Phone class="w-5 h-5 text-[#05F2AF]" />
+                <span>449 572 9599</span>
+            </div>
+
+            <div class="flex gap-5 justify-center md:justify-start pt-2">
+                <a href="#" class="cursor-pointer hover:scale-110 transition">
+                    <Youtube class="w-6 h-6 text-[#ff0000]" />
+                </a>
+
+                <a href="#" class="cursor-pointer hover:scale-110 transition">
+                    <Instagram class="w-6 h-6 text-[#d62976]" />
+                </a>
+
+                <a href="#" class="cursor-pointer hover:scale-110 transition">
+                    <Facebook class="w-6 h-6 text-[#1877f2]" />
+                </a>
+
+                <a href="#" class="cursor-pointer hover:scale-110 transition">
+                    <Music2 class="w-6 h-6 text-white" />
+                </a>
+
+                <a href="#" class="cursor-pointer hover:scale-110 transition">
+                    <Send class="w-6 h-6 text-[#5dc4ff] rotate-45" />
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div
+        class="relative mt-14 text-center text-white/60 flex items-center justify-center gap-2"
+    >
+        <Copyright class="w-4 h-4" />
+        <span>2025 Desarrollado por Alexis Laris</span>
+    </div>
+</footer>
+
+<link rel="stylesheet" href="/src/components/footer/Footer.css" />

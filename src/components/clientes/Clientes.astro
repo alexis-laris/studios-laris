@@ -1,0 +1,354 @@
+---
+import { Youtube, Instagram, Music2, Facebook, Send } from "lucide-astro";
+
+interface Client {
+    name: string;
+    role: string;
+    note: string;
+    stack: string[];
+    impact: string;
+    img?: string;
+    socials: {
+        yt: string;
+        ig: string;
+        tk: string;
+        fb?: string;
+        tg?: string;
+    };
+}
+
+const clients: Client[] = [
+    {
+        name: "Domignuero",
+        role: "Fotógrafa Creativa",
+        note: "Producción visual artística para marcas y contenido comercial.",
+        stack: ["Branding", "Fotografía", "Edición"],
+        impact: "+120% engagement",
+        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3MYUf3myjof2FF9VOgIm9Bps-y6nZRbPXGQ&s",
+        socials: {
+            yt: "https://youtube.com/@alicemoret",
+            ig: "https://instagram.com/alicemoret",
+            tk: "https://tiktok.com/@alicemoret",
+            fb: "https://facebook.com/alicemoret",
+            tg: "https://t.me/alicemoret",
+        },
+    },
+    {
+        name: "Diego Santori",
+        role: "VideoEditor",
+        note: "Edición enfocada en ritmo, storytelling y formatos verticales.",
+        stack: ["Edición", "Reels", "Cinemática"],
+        impact: "Conversiones x2",
+        img: "https://api.iconify.design/lucide:camera.svg?color=white",
+        socials: {
+            yt: "https://youtube.com/@diegosantori",
+            ig: "https://instagram.com/santori.edit",
+            tk: "https://tiktok.com/@santoriedits",
+            fb: "https://facebook.com/diegosantori",
+            tg: "#",
+        },
+    },
+    {
+        name: "Valeria Knopp",
+        role: "UX Designer",
+        note: "Experiencias digitales centradas en claridad y emoción.",
+        stack: ["UX", "UI", "Branding"],
+        impact: "+ Experiencia Premium",
+        img: "https://api.iconify.design/lucide:sparkles.svg?color=white",
+        socials: {
+            yt: "#",
+            ig: "https://instagram.com/valknopp",
+            tk: "#",
+            fb: "#",
+            tg: "#",
+        },
+    },
+    {
+        name: "Marco Ríos",
+        role: "Artista Digital",
+        note: "Ilustración y arte visual para campañas y contenido.",
+        stack: ["Ilustración", "Concept Art", "Edición"],
+        impact: "+ Alto impacto visual",
+        img: "https://api.iconify.design/lucide:palette.svg?color=white",
+        socials: {
+            yt: "#",
+            ig: "https://instagram.com/marc.rios",
+            tk: "https://tiktok.com/@markart",
+            fb: "#",
+            tg: "#",
+        },
+    },
+    {
+        name: "Camila Duarte",
+        role: "Brand Manager",
+        note: "Construcción estratégica de marca para negocios emergentes.",
+        stack: ["Branding", "Gestión", "Copy"],
+        impact: "+ Reconocimiento",
+        img: "https://api.iconify.design/lucide:badge-check.svg?color=white",
+        socials: {
+            yt: "https://youtube.com/@camiladuarte",
+            ig: "https://instagram.com/camidu",
+            tk: "#",
+            fb: "#",
+            tg: "#",
+        },
+    },
+    {
+        name: "Leo Hernández",
+        role: "Músico y Productor",
+        note: "Creación de audio original y diseño sonoro para contenido.",
+        stack: ["Audio", "Producción", "Mix"],
+        impact: "+ Identidad sonora",
+        img: "https://api.iconify.design/lucide:music-2.svg?color=white",
+        socials: {
+            yt: "https://youtube.com/@leohz",
+            ig: "#",
+            tk: "https://tiktok.com/@leosound",
+            fb: "#",
+            tg: "#",
+        },
+    },
+    {
+        name: "Elena Voss",
+        role: "Marketing Strategist",
+        note: "Campañas digitales con visión de crecimiento y posicionamiento.",
+        stack: ["Marketing", "Ads", "Storytelling"],
+        impact: "+ Escalabilidad",
+        img: "https://api.iconify.design/lucide:target.svg?color=white",
+        socials: {
+            yt: "#",
+            ig: "https://instagram.com/elenavoss",
+            tk: "#",
+            fb: "#",
+            tg: "#",
+        },
+    },
+    {
+        name: "Rafael Montes",
+        role: "Creador de Contenido",
+        note: "Contenido dinámico y de alto impacto para redes sociales.",
+        stack: ["Edición", "Shorts", "Creatividad"],
+        impact: "Alcance x3",
+        img: "https://api.iconify.design/lucide:film.svg?color=white",
+        socials: {
+            yt: "https://youtube.com/@rafaelmontes",
+            ig: "#",
+            tk: "https://tiktok.com/@rafamontes",
+            fb: "#",
+            tg: "#",
+        },
+    },
+    {
+        name: "Lucía Navarro",
+        role: "Motion Designer",
+        note: "Animaciones limpias y modernas para marcas digitales.",
+        stack: ["Motion", "Animación", "Diseño"],
+        impact: "+ Dinamismo",
+        img: "https://api.iconify.design/lucide:wand.svg?color=white",
+        socials: {
+            yt: "#",
+            ig: "https://instagram.com/lucianav",
+            tk: "#",
+            fb: "#",
+            tg: "#",
+        },
+    },
+    {
+        name: "Héctor Salazar",
+        role: "Director Creativo",
+        note: "Gestión de proyectos visuales y dirección artística.",
+        stack: ["Creatividad", "Dirección", "Branding"],
+        impact: "+ Cohesión visual",
+        img: "https://api.iconify.design/lucide:briefcase.svg?color=white",
+        socials: {
+            yt: "#",
+            ig: "https://instagram.com/hector.salazar",
+            tk: "#",
+            fb: "#",
+            tg: "#",
+        },
+    },
+    {
+        name: "Nadia Rossi",
+        role: "Social Media Manager",
+        note: "Gestión estratégica de contenido para crecimiento orgánico.",
+        stack: ["SMM", "Copywriting", "Estrategia"],
+        impact: "+ Crecimiento real",
+        img: "https://api.iconify.design/lucide:share-2.svg?color=white",
+        socials: {
+            yt: "#",
+            ig: "https://instagram.com/nadiarossi",
+            tk: "https://tiktok.com/@nadiar",
+            fb: "#",
+            tg: "#",
+        },
+    },
+    {
+        name: "Tomás Méndez",
+        role: "Streamer & Host",
+        note: "Presentador con energía, carisma y enfoque en contenido en vivo.",
+        stack: ["Streaming", "Shorts", "Producción"],
+        impact: "+ Comunidad",
+        img: "https://api.iconify.design/lucide:mic.svg?color=white",
+        socials: {
+            yt: "https://youtube.com/@tmendez",
+            ig: "#",
+            tk: "https://tiktok.com/@livetomas",
+            fb: "#",
+            tg: "#",
+        },
+    },
+];
+---
+
+<style>
+    .gradient-title {
+        background: linear-gradient(
+            45deg,
+            #4b1c8c,
+            #8435f2,
+            #7630d9,
+            #3f1a70,
+            #05f2af
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+</style>
+
+<section
+    class="relative w-full bg-black flex items-center justify-center text-center px-6 md:px-12 py-20"
+    id="clientes"
+>
+    <div
+        class="absolute top-0 left-0 h-[600px] bg-[#05f2af]/10 blur-[150px] rounded-full"
+    >
+    </div>
+
+    <div class="relative flex flex-col items-center gap-8">
+        <span
+            class="text-[#05f2af] tracking-[0.25em] text-sm sm:text-base md:text-lg uppercase"
+        >
+            ✦ CONFIAN EN MI TRABAJO ✦
+        </span>
+
+        <h1
+            class="relative text-white font-anton uppercase text-[15vw] sm:text-[11vw] md:text-[8vw] lg:text-[6vw] shine-title whitespace-nowrap px-4"
+        >
+            MIS <span class="text-[#05F2AF] italic">CLIENTES</span>
+        </h1>
+
+        <p class="text-white/70 leading-relaxed max-w-xl text-lg">
+            He colaborado con más de una docena de creadores, emprendedores y
+            marcas para construir identidades visuales poderosas y contenido que
+            realmente destaca.
+        </p>
+    </div>
+</section>
+
+<section class="relative w-full bg-black px-6 md:px-12 pb-24">
+    <div
+        class="absolute bottom-0 right-0 w-[500px] h-[500px] bg-[#05f2af]/10 blur-[150px] rounded-full"
+    >
+    </div>
+
+    <div
+        class="relative max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8"
+    >
+        {
+            clients.map((client) => (
+                <article class="group relative overflow-hidden rounded-3xl border border-white/10 bg-black/70 backdrop-blur-sm p-6 flex flex-col gap-4 hover:-translate-y-2 hover:shadow-[0_0_30px_rgba(4,242,175,0.25)] transition-all duration-300 cursor-pointer">
+                    <div class="absolute inset-px rounded-[1.4rem] bg-linear-to-br from-white/5 via-transparent to-[#05f2af]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
+                    <div class="relative w-full h-36 rounded-2xl overflow-hidden bg-white/5 border border-white/10">
+                        <img
+                            src={client.img}
+                            alt={client.name}
+                            class="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-all duration-300"
+                        />
+                    </div>
+
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="text-xl text-white font-anton italic">
+                                {client.name}
+                            </h3>
+                            <p class="text-xs text-white/60 mt-1">
+                                {client.role}
+                            </p>
+                        </div>
+
+                        <span class="text-[10px] uppercase tracking-[0.18em] rounded-full border border-white/15 bg-white/5 px-2 py-1 text-white/60">
+                            Cliente
+                        </span>
+                    </div>
+
+                    <p class="text-sm text-white/70 leading-relaxed">
+                        {client.note}
+                    </p>
+
+                    <div class="flex justify-between items-end mt-auto">
+                        <div class="flex flex-wrap gap-2">
+                            {client.stack.map((tag) => (
+                                <span class="text-[11px] rounded-full bg-white/5 px-3 py-1 text-white/70">
+                                    {tag}
+                                </span>
+                            ))}
+                        </div>
+
+                        <p class="text-xs font-semibold text-[#05f2af]">
+                            {client.impact}
+                        </p>
+                    </div>
+
+                    <div class="flex gap-4 pt-3 border-t border-white/10 mt-4">
+                        <a
+                            href={client.socials.yt}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="cursor-pointer text-[#ff0000] hover:text-[#ff4d4d] transition"
+                        >
+                            <Youtube class="w-5 h-5" />
+                        </a>
+
+                        <a
+                            href={client.socials.ig}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="cursor-pointer text-[#d62976] hover:text-[#ff53a8] transition"
+                        >
+                            <Instagram class="w-5 h-5" />
+                        </a>
+
+                        <a
+                            href={client.socials.tk}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="cursor-pointer text-white hover:text-[#c3c3c3] transition"
+                        >
+                            <Music2 class="w-5 h-5" />
+                        </a>
+
+                        <a
+                            href={client.socials.fb}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="cursor-pointer text-[#1877f2] hover:text-[#4d9aff] transition"
+                        >
+                            <Facebook class="w-5 h-5" />
+                        </a>
+
+                        <a
+                            href={client.socials.tg}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="cursor-pointer text-[#2AABEE] hover:text-[#5dc4ff] transition"
+                        >
+                            <Send class="w-5 h-5 rotate-45" />
+                        </a>
+                    </div>
+                </article>
+            ))
+        }
+    </div>
+</section>

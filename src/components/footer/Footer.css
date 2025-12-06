@@ -1,0 +1,19 @@
+.glow-image {
+    box-shadow: 0 0 40px #05f2af55;
+    transition:
+        box-shadow 0.4s ease,
+        transform 0.7s ease;
+}
+
+.glow-image:hover {
+    box-shadow: 0 0 40px #05f2afaa;
+}
+
+.rotate-360 {
+    transform: rotate(0deg);
+}
+
+
+.rotate-360:hover {
+    transform: rotate(360deg);
+}

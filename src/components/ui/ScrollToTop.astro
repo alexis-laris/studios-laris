@@ -1,0 +1,66 @@
+---
+import { ArrowUp } from "lucide-astro";
+---
+
+<style>
+    .scroll-top-container {
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+        z-index: 999;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.4s ease;
+    }
+
+    .scroll-top-container.visible {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .scroll-btn {
+        width: 55px;
+        height: 55px;
+        border-radius: 50%;
+        background: #7c3aed;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+
+        box-shadow: 0 0 14px #7c3aed50;
+        transition:
+            transform 0.3s ease,
+            box-shadow 0.3s ease;
+    }
+
+    .scroll-btn:hover {
+        transform: scale(1.12);
+        box-shadow: 0 0 18px #7c3aed80;
+    }
+</style>
+
+<div id="scrollTopContainer" class="scroll-top-container">
+    <button id="scrollBtn" class="scroll-btn">
+        <ArrowUp size={28} color="white" stroke-width={2.5} />
+    </button>
+</div>
+
+<script is:inline>
+    const container = document.getElementById("scrollTopContainer");
+    const button = document.getElementById("scrollBtn");
+
+    const showAt = 250;
+
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > showAt) {
+            container.classList.add("visible");
+        } else {
+            container.classList.remove("visible");
+        }
+    });
+
+    button.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+</script>

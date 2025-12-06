@@ -1,0 +1,58 @@
+@keyframes bgPulse {
+    0% {
+        transform: scale(1);
+        filter: brightness(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+        filter: brightness(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+        filter: brightness(1);
+    }
+}
+
+.animate-bgPulse {
+    animation: bgPulse 12s ease-in-out infinite;
+}
+
+.shine-title {
+    position: relative;
+    overflow: visible;
+}
+
+.shine-effect {
+    position: absolute;
+    top: 0;
+    left: -150%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(120deg,
+            transparent 0%,
+            rgba(255, 255, 255, 0.05) 35%,
+            rgba(255, 255, 255, 0.25) 50%,
+            rgba(255, 255, 255, 0.05) 65%,
+            transparent 100%);
+    filter: blur(25px);
+
+    transform: skewX(-20deg);
+    animation: shineMove 4s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes shineMove {
+    0% {
+        left: -150%;
+    }
+
+    60% {
+        left: 150%;
+    }
+
+    100% {
+        left: 150%;
+    }
+}

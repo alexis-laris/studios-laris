@@ -1,0 +1,50 @@
+.menu-link {
+    position: relative;
+    padding-bottom: 3px;
+    display: inline-block;
+    transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.menu-link:hover {
+    color: #05f2af;
+    transform: translateY(-2px);
+}
+
+.menu-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0%;
+    background: #05f2af;
+    transition: width 0.25s ease;
+}
+
+.menu-link:hover::after {
+    width: 100%;
+}
+
+.glow-image {
+    box-shadow: 0 0 40px #05f2af55;
+
+}
+
+.glow-image:hover {
+    box-shadow: 0 0 40px #05f2afaa;
+
+}
+
+.rotate-once {
+    animation: rotateOnce 0.7s ease-out forwards;
+}
+
+@keyframes rotateOnce {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
