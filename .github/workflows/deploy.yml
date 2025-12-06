@@ -20,7 +20,7 @@ jobs:
 
       - name: Create Service Account JSON file
         run: |
-          echo "${{ secrets.GCP_SA_KEY }}" > $GITHUB_WORKSPACE/gcloud-key.json
+          printf "%s" "${{ secrets.GCP_SA_KEY }}" > $GITHUB_WORKSPACE/gcloud-key.json
 
       - name: Submit to Cloud Build & Deploy to Cloud Run
         run: |
