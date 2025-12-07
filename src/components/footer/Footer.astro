@@ -1,14 +1,5 @@
 ---
-import {
-    Youtube,
-    Instagram,
-    Facebook,
-    Music2,
-    Send,
-    Mail,
-    Phone,
-    Copyright,
-} from "lucide-astro";
+import { Instagram, Mail, Phone, Copyright } from "lucide-astro";
 import profile from "/src/assets/imgs/profile.png";
 import "./Footer.css";
 ---
@@ -26,7 +17,7 @@ import "./Footer.css";
     </div>
 
     <div
-        class="relative max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10"
+        class="relative max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 select-none"
     >
         <div
             class="group flex flex-col items-center md:items-start text-center md:text-left gap-4"
@@ -86,31 +77,23 @@ import "./Footer.css";
             </div>
 
             <div class="flex gap-5 justify-center md:justify-start pt-2">
-                <a href="#" class="cursor-pointer hover:scale-110 transition">
-                    <Youtube class="w-6 h-6 text-[#ff0000]" />
-                </a>
-
-                <a href="#" class="cursor-pointer hover:scale-110 transition">
-                    <Instagram class="w-6 h-6 text-[#d62976]" />
-                </a>
-
-                <a href="#" class="cursor-pointer hover:scale-110 transition">
-                    <Facebook class="w-6 h-6 text-[#1877f2]" />
-                </a>
-
-                <a href="#" class="cursor-pointer hover:scale-110 transition">
-                    <Music2 class="w-6 h-6 text-white" />
-                </a>
-
-                <a href="#" class="cursor-pointer hover:scale-110 transition">
-                    <Send class="w-6 h-6 text-[#5dc4ff] rotate-45" />
+                <a
+                    href="https://www.instagram.com/alexis_laris/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="group w-8 h-8 flex items-center justify-center rounded-full bg-white/5 text-white hover:bg-linear-to-tr hover:from-[#f09433] hover:via-[#bc1888] hover:to-[#bc2a8d] transform transition-all duration-300 cursor-pointer"
+                >
+                    <Instagram
+                        size={20}
+                        class="group-hover:scale-125 transition-transform duration-300"
+                    />
                 </a>
             </div>
         </div>
     </div>
 
     <div
-        class="relative mt-14 text-center text-white/60 flex items-center justify-center gap-2"
+        class="relative mt-14 text-center text-white/60 flex items-center justify-center gap-2 select-none"
     >
         <Copyright class="w-4 h-4" />
         <span>2025 Desarrollado por Alexis Laris</span>

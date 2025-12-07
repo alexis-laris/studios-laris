@@ -1,5 +1,14 @@
 ---
-import { Youtube, Instagram, Music2, Facebook, Send } from "lucide-astro";
+import adelrg from "@/assets/imgs/clientes/adelrg.webp";
+import nandaherrera from "@/assets/imgs/clientes/nandaherrera.webp";
+import melany from "@/assets/imgs/clientes/melany.webp";
+import alexander from "@/assets/imgs/clientes/alexander.webp";
+
+import YoutubeIcon from "@/icons/youtube.svg";
+import InstagramIcon from "@/icons/instagram.svg";
+import TikTokIcon from "@/icons/tiktok.svg";
+import FacebookIcon from "@/icons/facebook.svg";
+import TelegramIcon from "@/icons/telegram.svg";
 
 interface Client {
     name: string;
@@ -27,10 +36,9 @@ const clients: Client[] = [
         img: "https://yt3.ggpht.com/y59J35AB8GtFTL97H-j_gwV97Ab6-N3z2gguIiCJToxGA9jALQ9P29RnlxZ_oU9T2ys-qyiSyQ=s176-c-k-c0x00ffffff-no-rj-mo",
         socials: {
             yt: "https://www.youtube.com/@HermanasJM",
-            ig: "https://instagram.com/alicemoret",
-            tk: "https://tiktok.com/@alicemoret",
-            fb: "https://facebook.com/alicemoret",
-            tg: "https://t.me/alicemoret",
+            ig: "https://www.instagram.com/odalysanddafnne/?hl=es",
+            tk: "https://www.tiktok.com/@odalysanddafnne?lang=es",
+            fb: "https://www.facebook.com/p/Hermanasjm-100066529932116/",
         },
     },
     {
@@ -41,11 +49,10 @@ const clients: Client[] = [
         impact: "4M+ Suscriptores",
         img: "https://yt3.googleusercontent.com/ytc/AIdro_l_I_x_dfDCgP2plf-u0LVL_RTQRlA9k6yrTLP_DzayVd4=s900-c-k-c0x00ffffff-no-rj",
         socials: {
-            yt: "https://youtube.com/@diegosantori",
-            ig: "https://instagram.com/santori.edit",
-            tk: "https://tiktok.com/@santoriedits",
-            fb: "https://facebook.com/diegosantori",
-            tg: "#",
+            yt: "https://www.youtube.com/@dominguero",
+            ig: "https://www.instagram.com/dominguero/?hl=es-la",
+            tk: "https://www.tiktok.com/@domingueroficial?lang=es",
+            fb: "https://www.facebook.com/Dominguero/?locale=es_LA",
         },
     },
     {
@@ -56,11 +63,9 @@ const clients: Client[] = [
         impact: "8M+ Suscriptores",
         img: "https://yt3.googleusercontent.com/ZYiYFOzqIOpN1iS4tw_-axq0S24WR8VicCacPuJnQZn_3RffQhGGoAClqWCxsz2ixAhtO_gvKg=s900-c-k-c0x00ffffff-no-rj",
         socials: {
-            yt: "#",
-            ig: "https://instagram.com/valknopp",
-            tk: "#",
-            fb: "#",
-            tg: "#",
+            yt: "https://www.youtube.com/@SoyCarlitozz",
+            ig: "https://www.instagram.com/itscarlitozz/",
+            tk: "https://www.tiktok.com/@isnotcarlitozz",
         },
     },
     {
@@ -71,11 +76,9 @@ const clients: Client[] = [
         impact: "3M+ Suscriptores",
         img: "https://yt3.googleusercontent.com/t2DIWje_XS7YdR72jqVWxhNT6DiWg0SIv7xlPcbPcAwhaDbo_0H9hYpUwkF8jTgJdAhlZ9wnaw=s900-c-k-c0x00ffffff-no-rj",
         socials: {
-            yt: "#",
-            ig: "https://instagram.com/marc.rios",
-            tk: "https://tiktok.com/@markart",
-            fb: "#",
-            tg: "#",
+            yt: "https://www.youtube.com/@ElGuarura",
+            ig: "https://www.instagram.com/el.guarura/",
+            tk: "https://www.tiktok.com/@el.guaruraa",
         },
     },
     {
@@ -84,13 +87,12 @@ const clients: Client[] = [
         note: "Producción visual y artística para contenido comercial.",
         stack: ["Miniaturas"],
         impact: "700K+ Suscriptores",
-        img: "https://yt3.ggpht.com/_1PoQwOraC8X0HFopM-CIVjkFvMI5ifNtXLG_YUiyv9JJUxC4rcpexZrZsjysxcO8xNd-E-j48A=s176-c-k-c0x00ffffff-no-rj-mo",
+        img: melany.src,
         socials: {
-            yt: "https://youtube.com/@camiladuarte",
-            ig: "https://instagram.com/camidu",
-            tk: "#",
-            fb: "#",
-            tg: "#",
+            yt: "https://www.youtube.com/@melanyp",
+            ig: "https://www.instagram.com/melany.palacios01/",
+            tk: "https://www.tiktok.com/@melanypalacioss?lang=es",
+            fb: "https://www.facebook.com/p/Melany-Palacios-100086693445445/?locale=es_LA",
         },
     },
     {
@@ -99,13 +101,11 @@ const clients: Client[] = [
         note: "Producción visual y artística para contenido comercial.",
         stack: ["Miniaturas"],
         impact: "80K+ Suscriptores",
-        img: "https://yt3.ggpht.com/sYzC0s1MFGyoJAdBDX4eNIG2wl2cWzJXhI0O8C_hip0B7qK4-I-wnyt1DnHtYkwhsocVZEbZPA=s176-c-k-c0x00ffffff-no-rj-mo",
+        img: alexander.src,
         socials: {
-            yt: "https://youtube.com/@leohz",
-            ig: "#",
-            tk: "https://tiktok.com/@leosound",
-            fb: "#",
-            tg: "#",
+            yt: "https://www.youtube.com/@alexanderrv04",
+            ig: "https://www.instagram.com/alexander_rdz.04/",
+            tk: "https://www.tiktok.com/@alexanderdz04",
         },
     },
     {
@@ -114,13 +114,12 @@ const clients: Client[] = [
         note: "Producción visual y artística para contenido comercial.",
         stack: ["Miniaturas"],
         impact: "230K+ Suscriptores",
-        img: "https://yt3.ggpht.com/bO3o7AhxqdafvsNxowLB8mYFKz1LeaqAZopixbxRJRAxx8HItc5cz-HxewtQlmdqDp6FYkvam4I=s176-c-k-c0x00ffffff-no-rj-mo",
+        img: nandaherrera.src,
         socials: {
-            yt: "#",
-            ig: "https://instagram.com/elenavoss",
-            tk: "#",
-            fb: "#",
-            tg: "#",
+            yt: "https://www.youtube.com/@NandaHerre",
+            ig: "https://www.instagram.com/nanda.herra/",
+            tk: "https://www.tiktok.com/@nanda.herrera",
+            fb: "https://www.facebook.com/p/Nanda-Herrera-100064088552958/",
         },
     },
     {
@@ -129,13 +128,11 @@ const clients: Client[] = [
         note: "Producción visual y artística para contenido comercial.",
         stack: ["Miniaturas"],
         impact: "120K+ Suscriptores",
-        img: "https://yt3.ggpht.com/krX4mm-jJc0iGFeknQfAejLJxwjQXjasKfRXBO30BedsCKTCqk1CqoSWogVCSPrL7JC2iU9L=s176-c-k-c0x00ffffff-no-rj-mo",
+        img: adelrg.src,
         socials: {
-            yt: "https://youtube.com/@rafaelmontes",
-            ig: "#",
-            tk: "https://tiktok.com/@rafamontes",
-            fb: "#",
-            tg: "#",
+            yt: "https://www.youtube.com/@AdelRG",
+            ig: "https://www.instagram.com/adelrg82/",
+            tk: "https://www.tiktok.com/@adelrg0s",
         },
     },
     {
@@ -146,11 +143,10 @@ const clients: Client[] = [
         impact: "500K+ Suscriptores",
         img: "https://yt3.ggpht.com/34q7iWAyUX_LlGvy2Frkbp1Yh5I-cwKQbjplgYknMBXykYc3631PRIUlNW0XCTEwJLdcHNgc3p4=s176-c-k-c0x00ffffff-no-rj-mo",
         socials: {
-            yt: "#",
-            ig: "https://instagram.com/lucianav",
-            tk: "#",
-            fb: "#",
-            tg: "#",
+            yt: "https://www.youtube.com/@CiertopeloGAME",
+            ig: "https://www.instagram.com/ciertopelo_game/?hl=es-la",
+            tk: "https://www.tiktok.com/@ciertopelogame?lang=es",
+            fb: "https://www.facebook.com/CiertopeloGame?fref=ts",
         },
     },
     {
@@ -161,11 +157,10 @@ const clients: Client[] = [
         impact: "1M+ Suscriptores",
         img: "https://yt3.googleusercontent.com/MjrhjBedRc5p7Gk_35GwNiXJ8aWZM1pygQsDRFG_CvWlASP0KawFpH1ORozpfeajJv7NLHU0Sg=s900-c-k-c0x00ffffff-no-rj",
         socials: {
-            yt: "#",
-            ig: "https://instagram.com/hector.salazar",
-            tk: "#",
-            fb: "#",
-            tg: "#",
+            yt: "https://www.youtube.com/@shaulaponceoficial",
+            ig: "https://www.instagram.com/shaula.ponce",
+            tk: "https://www.tiktok.com/@shaulaponce2.0?lang=es",
+            fb: "https://www.facebook.com/shaulaponcee2.0/",
         },
     },
     {
@@ -176,11 +171,10 @@ const clients: Client[] = [
         impact: "3M+ Suscriptores",
         img: "https://yt3.ggpht.com/NQeGb9S6qlx7K3NPqQiXvHehFQAGxn1zHXI_VwKYb4V_vgBRXdhYKudLEa3X14i3fM41VSEKPA=s176-c-k-c0x00ffffff-no-rj-mo",
         socials: {
-            yt: "#",
-            ig: "https://instagram.com/nadiarossi",
-            tk: "https://tiktok.com/@nadiar",
-            fb: "#",
-            tg: "#",
+            yt: "https://www.youtube.com/@Graser",
+            ig: "https://www.instagram.com/graser",
+            tk: "https://www.tiktok.com/@officialgraser",
+            fb: "https://www.facebook.com/graser",
         },
     },
     {
@@ -191,11 +185,9 @@ const clients: Client[] = [
         impact: "1M+ Suscriptores",
         img: "https://yt3.googleusercontent.com/ytc/AIdro_m-_bkBc-6sEnxXKcpEF-eOW-pS_xwivJvpaaUHOPj-NPE=s176-c-k-c0x00ffffff-no-rj-mo",
         socials: {
-            yt: "https://youtube.com/@tmendez",
-            ig: "#",
-            tk: "https://tiktok.com/@livetomas",
-            fb: "#",
-            tg: "#",
+            yt: "https://www.youtube.com/@HasvikGG",
+            ig: "https://www.instagram.com/hasvok/",
+            tk: "https://www.tiktok.com/@hasvuki?lang=es",
         },
     },
 ];
@@ -225,7 +217,7 @@ const clients: Client[] = [
     >
     </div>
 
-    <div class="relative flex flex-col items-center gap-8">
+    <div class="relative flex flex-col items-center gap-8 select-none">
         <span
             class="text-[#05f2af] tracking-[0.25em] text-sm sm:text-base md:text-lg uppercase"
         >
@@ -253,18 +245,18 @@ const clients: Client[] = [
     </div>
 
     <div
-        class="relative max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8"
+        class="relative max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 select-none"
     >
         {
             clients.map((client) => (
                 <article class="group relative overflow-hidden rounded-3xl border border-white/10 bg-black/70 backdrop-blur-sm p-6 flex flex-col gap-4 hover:-translate-y-2 hover:shadow-[0_0_30px_rgba(4,242,175,0.25)] transition-all duration-300">
-                    <div class="absolute inset-px rounded-[1.4rem] bg-linear-to-br from-white/5 via-transparent to-[#05f2af]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    <div class="absolute inset-px rounded-[1.4rem] bg-linear-to-br from-white/5 via-transparent to-[#05f2af]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 select-none" />
 
                     <div class="relative w-full h-36 rounded-2xl overflow-hidden bg-white/5 border border-white/10">
                         <img
                             src={client.img}
                             alt={client.name}
-                            class="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-all duration-300"
+                            class="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-all duration-300 cursor-pointer"
                         />
                     </div>
 
@@ -300,18 +292,18 @@ const clients: Client[] = [
                             {client.impact}
                         </p>
                     </div>
-                    {/* Sección de iconos sociales */}
-                    {/* Sección de iconos sociales */}
+
                     <div class="flex gap-3 mt-4 flex-wrap">
                         {client.socials.yt && (
                             <a
                                 href={client.socials.yt}
                                 target="_blank"
-                                class="group w-8 h-8 flex items-center justify-center rounded-full bg-white/5 text-white hover:bg-[#FF0000] hover:text-white transform transition-all duration-300 cursor-pointer"
+                                class="group w-8 h-8 flex items-center justify-center rounded-full bg-white/5 hover:bg-[#FF0000] transform transition-all duration-300 cursor-pointer"
                             >
-                                <Youtube
-                                    size={20}
-                                    class="group-hover:scale-125 transition-transform duration-300"
+                                <img
+                                    src={YoutubeIcon.src}
+                                    alt="YouTube"
+                                    class="w-5 h-5 group-hover:scale-125 transition-transform duration-300 filter brightness-0 invert"
                                 />
                             </a>
                         )}
@@ -319,11 +311,12 @@ const clients: Client[] = [
                             <a
                                 href={client.socials.ig}
                                 target="_blank"
-                                class="group w-8 h-8 flex items-center justify-center rounded-full bg-white/5 text-white hover:bg-linear-to-tr hover:from-[#f09433] hover:via-[#bc1888] hover:to-[#bc2a8d] transform transition-all duration-300 cursor-pointer"
+                                class="group w-8 h-8 flex items-center justify-center rounded-full bg-white/5 hover:bg-linear-to-tr from-[#f09433] via-[#bc1888] to-[#bc2a8d] duration-300 transform transition-all cursor-pointer"
                             >
-                                <Instagram
-                                    size={20}
-                                    class="group-hover:scale-125 transition-transform duration-300"
+                                <img
+                                    src={InstagramIcon.src}
+                                    alt="Instagram"
+                                    class="w-5 h-5 group-hover:scale-125 transition-transform duration-300 filter brightness-0 invert"
                                 />
                             </a>
                         )}
@@ -331,11 +324,12 @@ const clients: Client[] = [
                             <a
                                 href={client.socials.tk}
                                 target="_blank"
-                                class="group w-8 h-8 flex items-center justify-center rounded-full bg-white/5 text-white hover:bg-cyan-500 hover:text-white transform transition-all duration-300 cursor-pointer"
+                                class="group w-8 h-8 flex items-center justify-center rounded-full bg-white/5 hover:bg-cyan-400 transform transition-all duration-300 cursor-pointer"
                             >
-                                <Music2
-                                    size={20}
-                                    class="group-hover:scale-125 transition-transform duration-300"
+                                <img
+                                    src={TikTokIcon.src}
+                                    alt="TikTok"
+                                    class="w-5 h-5 group-hover:scale-125 transition-transform duration-300 filter brightness-0 invert"
                                 />
                             </a>
                         )}
@@ -343,11 +337,12 @@ const clients: Client[] = [
                             <a
                                 href={client.socials.fb}
                                 target="_blank"
-                                class="group w-8 h-8 flex items-center justify-center rounded-full bg-white/5 text-white hover:bg-[#1877F2] hover:text-white transform transition-all duration-300 cursor-pointer"
+                                class="group w-8 h-8 flex items-center justify-center rounded-full bg-white/5 hover:bg-[#1877F2] transform transition-all duration-300 cursor-pointer"
                             >
-                                <Facebook
-                                    size={20}
-                                    class="group-hover:scale-125 transition-transform duration-300"
+                                <img
+                                    src={FacebookIcon.src}
+                                    alt="Facebook"
+                                    class="w-5 h-5 group-hover:scale-125 transition-transform duration-300 filter brightness-0 invert"
                                 />
                             </a>
                         )}
@@ -355,11 +350,12 @@ const clients: Client[] = [
                             <a
                                 href={client.socials.tg}
                                 target="_blank"
-                                class="group w-8 h-8 flex items-center justify-center rounded-full bg-white/5 text-white hover:bg-[#26A5E4] hover:text-white transform transition-all duration-300 cursor-pointer"
+                                class="group w-8 h-8 flex items-center justify-center rounded-full bg-white/5 hover:bg-[#26A5E4] transform transition-all duration-300 cursor-pointer"
                             >
-                                <Send
-                                    size={20}
-                                    class="group-hover:scale-125 transition-transform duration-300"
+                                <img
+                                    src={TelegramIcon.src}
+                                    alt="Telegram"
+                                    class="w-5 h-5 group-hover:scale-125 transition-transform duration-300 filter brightness-0 invert"
                                 />
                             </a>
                         )}
