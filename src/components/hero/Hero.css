@@ -1,5 +1,7 @@
 @keyframes bgPulse {
-    0% {
+
+    0%,
+    100% {
         transform: scale(1);
         filter: brightness(1);
     }
@@ -7,11 +9,6 @@
     50% {
         transform: scale(1.05);
         filter: brightness(1.2);
-    }
-
-    100% {
-        transform: scale(1);
-        filter: brightness(1);
     }
 }
 
@@ -37,7 +34,6 @@
             rgba(255, 255, 255, 0.05) 65%,
             transparent 100%);
     filter: blur(25px);
-
     transform: skewX(-20deg);
     animation: shineMove 4s ease-in-out infinite;
     pointer-events: none;
@@ -48,10 +44,7 @@
         left: -150%;
     }
 
-    60% {
-        left: 150%;
-    }
-
+    60%,
     100% {
         left: 150%;
     }
