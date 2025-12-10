@@ -1,15 +1,27 @@
+// @ts-check
 import { defineConfig } from 'astro/config';
+import cloudflare from '@astrojs/cloudflare';
+import react from '@astrojs/react';
 import tailwindcss from '@tailwindcss/vite';
 
+// https://astro.build/config
 export default defineConfig({
+  output: 'server',
+  adapter: cloudflare({
+    imageService: 'compile'
+  }),
+  integrations: [react()],
+
   vite: {
     plugins: [tailwindcss()],
     resolve: {
-      alias: {
+      // @ts-ignore
+      alias: import.meta.env.PROD && {
+        "react-dom/server": "react-dom/server.edge",
         '@': '/src',
         '@assets': '/src/assets',
         '@components': '/src/components',
-      }
-    }
-  },
+      },
+    },
+  }
 });

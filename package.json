@@ -9,11 +9,15 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/cloudflare": "^12.6.12",
+    "@astrojs/react": "^4.4.2",
     "@iconify-json/lucide": "^1.2.77",
     "@tailwindcss/vite": "^4.1.17",
     "astro": "^5.16.3",
     "astro-icon": "^1.1.5",
-    "lucide-astro": "^0.555.0"
+    "lucide-astro": "^0.555.0",
+    "lucide-react": "^0.559.0",
+    "resend": "^6.6.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.22",

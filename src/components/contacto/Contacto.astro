@@ -2,23 +2,20 @@
 import { Phone } from "lucide-astro";
 ---
 
-<section
-    class="w-full min-h-screen grid md:grid-cols-1 md:place-items-center"
+<div
+    class="bg-white w-full h-full flex flex-col items-center justify-center px-6 md:px-16 py-20 md:pt-32 select-none"
     id="contacto"
 >
-    <div
-        class="bg-white w-full h-full flex flex-col items-center justify-center px-6 md:px-16 py-20 md:pt-32 text-center select-none"
+    <h1
+        class="relative text-[#05F2AF] font-anton uppercase text-[15vw] sm:text-[11vw] md:text-[8vw] lg:text-[6vw] shine-title whitespace-nowrap italic px-4 mt-4 text-center"
     >
-        <h1
-            class="relative text-[#05F2AF] font-anton uppercase text-[15vw] sm:text-[11vw] md:text-[8vw] lg:text-[6vw] shine-title whitespace-nowrap italic px-4 mt-4"
-        >
-            CONTACTO
-        </h1>
+        CONTACTO
+    </h1>
 
-        <div
-            class="flex flex-col items-center justify-center max-w-md w-full space-y-10"
-        >
-            <div class="space-y-3 mt-2">
+    <div class="grid md:grid-cols-2 gap-10 md:gap-16 max-w-6xl w-full mt-10">
+        <!-- Parte Izquierda: Información de WhatsApp -->
+        <div class="flex flex-col items-center justify-center space-y-8">
+            <div class="space-y-3 text-center">
                 <h2 class="text-lg font-bold text-[#11071F] uppercase">
                     Información de Contacto
                 </h2>
@@ -30,7 +27,7 @@ import { Phone } from "lucide-astro";
 
             <div
                 class="bg-[#11071F] border-b-4 border-[#05F2AF] p-8 rounded-4xl shadow-xl backdrop-blur
-                   text-center w-full max-w-sm flex flex-col items-center gap-10"
+                       text-center w-full max-w-sm flex flex-col items-center gap-6"
             >
                 <div class="space-y-4">
                     <h3 class="text-2xl text-[#05F2AF] uppercase">WhatsApp</h3>
@@ -51,14 +48,134 @@ import { Phone } from "lucide-astro";
                     <a
                         href="https://wa.me/524495729599"
                         class="italic font-bold text-[#05f2af] border border-[#05f2af]/40 px-10 py-3 relative transition-all duration-300
-                       hover:text-white hover:border-white rounded-4xl overflow-hidden
-                       before:absolute before:inset-0 before:bg-[#05f2af]/10 before:-skew-x-6
-                       before:transition-all before:duration-300 hover:before:bg-white/10 before:rounded-4xl block"
+                           hover:text-white hover:border-white rounded-4xl overflow-hidden
+                           before:absolute before:inset-0 before:bg-[#05f2af]/10 before:-skew-x-6
+                           before:transition-all before:duration-300 hover:before:bg-white/10 before:rounded-4xl block"
                     >
                         Enviar Mensaje
                     </a>
                 </div>
             </div>
         </div>
+
+        <div class="flex flex-col items-center justify-center">
+            <div
+                class="bg-[#11071F] border-b-4 border-[#05F2AF] p-8 rounded-4xl shadow-xl backdrop-blur w-full max-w-md"
+            >
+                <h3 class="text-2xl text-[#05F2AF] uppercase text-center mb-6">
+                    Envía un Mensaje
+                </h3>
+
+                <form id="contactForm" class="space-y-4">
+                    <div>
+                        <label
+                            for="nombre"
+                            class="block text-gray-300 text-sm mb-2"
+                        >
+                            Nombre
+                        </label>
+                        <input
+                            type="text"
+                            id="nombre"
+                            name="name"
+                            required
+                            class="w-full px-4 py-3 bg-white/10 border border-[#05F2AF]/30 rounded-2xl text-white placeholder-gray-400
+                                   focus:outline-none focus:border-[#05F2AF] focus:ring-2 focus:ring-[#05F2AF]/20 transition-all"
+                            placeholder="Tu nombre"
+                        />
+                    </div>
+
+                    <div>
+                        <label
+                            for="email"
+                            class="block text-gray-300 text-sm mb-2"
+                        >
+                            Email
+                        </label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            required
+                            class="w-full px-4 py-3 bg-white/10 border border-[#05F2AF]/30 rounded-2xl text-white placeholder-gray-400
+                                   focus:outline-none focus:border-[#05F2AF] focus:ring-2 focus:ring-[#05F2AF]/20 transition-all"
+                            placeholder="tu@email.com"
+                        />
+                    </div>
+
+                    <div>
+                        <label
+                            for="mensaje"
+                            class="block text-gray-300 text-sm mb-2"
+                        >
+                            Mensaje
+                        </label>
+                        <textarea
+                            id="mensaje"
+                            name="mensaje"
+                            rows="4"
+                            required
+                            class="w-full px-4 py-3 bg-white/10 border border-[#05F2AF]/30 rounded-2xl text-white placeholder-gray-400
+                                   focus:outline-none focus:border-[#05F2AF] focus:ring-2 focus:ring-[#05F2AF]/20 transition-all resize-none"
+                            placeholder="Cuéntanos en qué podemos ayudarte..."
+                        ></textarea>
+                    </div>
+
+                    <button
+                        id="submitBtn"
+                        type="submit"
+                        class="cursor-pointer w-full italic font-bold text-[#05f2af] border border-[#05f2af]/40 px-10 py-3 relative transition-all duration-300
+                               hover:text-white hover:border-white rounded-4xl overflow-hidden
+                               before:absolute before:inset-0 before:bg-[#05f2af]/10 before:-skew-x-6
+                               before:transition-all before:duration-300 hover:before:bg-white/10 before:rounded-4xl"
+                    >
+                        Enviar Mensaje
+                    </button>
+
+                    <p
+                        id="formMessage"
+                        class="text-center text-sm mt-3 text-white"
+                    >
+                    </p>
+                </form>
+            </div>
+        </div>
     </div>
-</section>
+</div>
+
+<script>
+    const form = document.getElementById("contactForm") as HTMLFormElement;
+    const msg = document.getElementById("formMessage") as HTMLParagraphElement;
+    const btn = document.getElementById("submitBtn") as HTMLButtonElement;
+
+    form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        btn.disabled = true;
+        btn.textContent = "Enviando...";
+        btn.classList.add("opacity-60");
+        msg.textContent = "";
+
+        const formData = new FormData(form);
+
+        const response = await fetch("/api/contact", {
+            method: "POST",
+            body: formData,
+        });
+
+        const result = await response.json();
+
+        if (response.ok) {
+            msg.textContent = "✔ Tu mensaje ha sido enviado con éxito.";
+            msg.className = "text-center text-sm mt-3 text-[#05F2AF]";
+            form.reset();
+        } else {
+            msg.textContent = "❌ Ocurrió un error, intenta más tarde.";
+            msg.className = "text-center text-sm mt-3 text-red-500";
+        }
+
+        btn.disabled = false;
+        btn.textContent = "Enviar Mensaje";
+        btn.classList.remove("opacity-60");
+    });
+</script>
