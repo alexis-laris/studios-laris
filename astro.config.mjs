@@ -17,8 +17,7 @@ export default defineConfig({
     resolve: {
       // @ts-ignore
       alias: import.meta.env.PROD && {
-        "react-dom/server": "react-dom/server.edge",
-        '@': '/src',
+        "react-dom/server": "react-dom/server.edge", '@': '/src',
         '@assets': '/src/assets',
         '@components': '/src/components',
       },
