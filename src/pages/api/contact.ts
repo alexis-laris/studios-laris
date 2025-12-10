@@ -7,10 +7,10 @@ export const prerender = false;
 export const POST: APIRoute = async ({ request, locals }) => {
     try {
 
-        const resendApiKey = import.meta.env.RESEND_API_KEY ?? locals.runtime?.env.RESEND_API_KEY;
+        const resendApiKey = import.meta.env.RESEND_API_KEY;
         const resend = new Resend(resendApiKey);
 
-        // Manejar diferentes tipos de contenido
+
         let data: any;
         const contentType = request.headers.get('content-type') || '';
 
@@ -24,7 +24,7 @@ export const POST: APIRoute = async ({ request, locals }) => {
                 mensaje: formData.get('mensaje') as string,
             };
         } else {
-            // Fallback: intentar parsear como JSON
+
             const text = await request.text();
             try {
                 data = JSON.parse(text);
@@ -40,7 +40,7 @@ export const POST: APIRoute = async ({ request, locals }) => {
 
         const { name, email, mensaje } = data;
 
-        // Validar campos requeridos
+
         if (!name || !email || !mensaje) {
             return new Response(JSON.stringify({
                 error: 'Faltan campos requeridos: name, email, mensaje'
@@ -50,7 +50,7 @@ export const POST: APIRoute = async ({ request, locals }) => {
             });
         }
 
-        // Validar formato de email
+
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailRegex.test(email)) {
             return new Response(JSON.stringify({
