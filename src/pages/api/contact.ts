@@ -8,7 +8,12 @@ export const POST: APIRoute = async ({ request, locals }) => {
     try {
 
         const resendApiKey = import.meta.env.RESEND_API_KEY;
+
+        console.log(resendApiKey, "SI LLEGA????");
+
         const resend = new Resend(resendApiKey);
+
+
 
 
         let data: any;
