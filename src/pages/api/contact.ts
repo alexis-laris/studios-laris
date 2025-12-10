@@ -7,12 +7,7 @@ export const prerender = false;
 export const POST: APIRoute = async ({ request, locals }) => {
     try {
 
-        const resendApiKey = import.meta.env.RESEND_API_KEY;
-
-        console.log(resendApiKey, "SI LLEGA????");
-        console.log(locals, "SI LLEGAN ESTOS????");
-
-
+        const resendApiKey = import.meta.env.RESEND_API_KEY ?? locals.runtime?.env.RESEND_API_KEY;
 
 
         const resend = new Resend(resendApiKey);
